@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block theme %}theme-apply{% endblock %}
+{% block content %}
+  <h2>My Loan Applications</h2>
+  {% if loans %}
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Amount</th>
+        <th>Address</th>
+        <th>Status</th>
+        <th>Details</th>
+      </tr>
+      {% for loan in loans %}
+      <tr>
+        <td>{{ loan.id }}</td>
+        <td>{{ loan.amount }}</td>
+        <td>{{ loan.address }}</td>
+        <td>{{ loan.status }}</td>
+        <td><a href="{{ url_for('loan_details', loan_id=loan.id) }}" class="btn">View</a></td>
+      </tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <p>No loan applications found.</p>
+  {% endif %}
+{% endblock %}
