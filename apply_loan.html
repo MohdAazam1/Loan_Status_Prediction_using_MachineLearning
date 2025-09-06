@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block theme %}theme-apply{% endblock %}
+{% block content %}
+  <h2>Apply for a Loan</h2>
+  <form method="POST">
+    <label>Loan Amount</label>
+    <input type="number" name="amount" required>
+
+    <label>Address</label>
+    <textarea name="address" required></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+{% endblock %}
