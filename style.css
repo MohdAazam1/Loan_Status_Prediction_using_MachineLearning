@@ -1,0 +1,159 @@
+/* ===========================
+   Global Styles
+=========================== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* ===========================
+   Navigation
+=========================== */
+nav {
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  backdrop-filter: blur(6px);
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+/* ===========================
+   Centered Container Box
+=========================== */
+.container {
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 15px;
+  max-width: 700px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+}
+
+/* Different container shades for each theme */
+.theme-home .container { background: rgba(26, 26, 46, 0.65); }
+.theme-apply .container { background: rgba(41, 41, 41, 0.65); }
+.theme-admin .container { background: rgba(27, 38, 44, 0.65); }
+
+/* ===========================
+   Forms
+=========================== */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input, textarea {
+  width: 80%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.5);
+  backdrop-filter: blur(4px);
+}
+
+/* Input colors per theme */
+.theme-apply input, .theme-apply textarea { background: rgba(60, 60, 60, 0.8); }
+.theme-admin input, .theme-admin textarea { background: rgba(46, 59, 78, 0.8); }
+.theme-home input, .theme-home textarea { background: rgba(34, 34, 34, 0.8); }
+
+textarea {
+  min-height: 100px;
+}
+
+/* ===========================
+   Buttons
+=========================== */
+button, .btn {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
+
+/* ===========================
+   Tables
+=========================== */
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  text-align: center;
+  background: rgba(0,0,0,0.45);
+  border-radius: 12px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #555;
+}
+
+th {
+  background: rgba(255,255,255,0.1);
+}
+
+/* ===========================
+   Flash messages
+=========================== */
+.flash-messages { margin: 15px auto; text-align: center; }
+.flash { padding: 10px; border-radius: 5px; margin-bottom: 8px; }
+.flash.success { background: #4caf50; color: white; }
+.flash.danger { background: #f44336; color: white; }
+.flash.warning { background: #ff9800; color: black; }
+.flash.info { background: #2196f3; color: white; }
+
+/* ===========================
+   Admin Action Buttons
+=========================== */
+.approve { background: #4caf50; color: white; }
+.reject { background: #f44336; color: white; }
+
+/* ===========================
+   Themes (dark gradients)
+=========================== */
+.theme-home { background: linear-gradient(135deg, #1a1a2e, #16213e); }
+.theme-apply { background: linear-gradient(135deg, #2c2c2c, #1f1f1f); }
+.theme-admin { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); }
+
+.theme-home nav { background: rgba(15, 52, 96, 0.8); }
+.theme-apply nav { background: rgba(60, 60, 60, 0.8); }
+.theme-admin nav { background: rgba(17, 45, 78, 0.8); }
