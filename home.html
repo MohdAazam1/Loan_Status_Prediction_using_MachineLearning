@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block theme %}theme-home{% endblock %}
+{% block content %}
+  <h1> Loan Application </h1>
+  <p>Apply for personal, home, or business loans easily.</p>
+  <a href="{{ url_for('apply_loan') }}" class="btn">Apply Now</a>
+{% endblock %}
