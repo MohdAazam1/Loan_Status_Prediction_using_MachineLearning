@@ -88,12 +88,3 @@ Loan_app/
 - Users can **register/login** to apply for loans.  
 - Admin has a separate login for managing applications.  
 
----
-
-## 📸 Screenshots
-*(Add relevant screenshots of the app UI here)*  
-
----
-
-## 👨‍💻 Author
-Developed by **[Your Name]**  
