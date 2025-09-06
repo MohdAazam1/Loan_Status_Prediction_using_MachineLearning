@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block theme %}theme-admin{% endblock %}
+{% block content %}
+  <h2>Admin Panel - Loan Applications</h2>
+  {% if loans %}
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>User</th>
+        <th>Amount</th>
+        <th>Address</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+      {% for loan in loans %}
+      <tr>
+        <td><a href="{{ url_for('loan_details', loan_id=loan.id) }}">{{ loan.id }}</a></td>
+        <td>{{ loan.name }}</td>
+        <td>{{ loan.amount }}</td>
+        <td>{{ loan.address }}</td>
+        <td>{{ loan.status }}</td>
+        <td>
+          {% if loan.status == "Pending" %}
+            <a href="{{ url_for('update_loan', loan_id=loan.id, status='approved') }}" class="btn approve">Approve</a>
+            <a href="{{ url_for('update_loan', loan_id=loan.id, status='rejected') }}" class="btn reject">Reject</a>
+          {% else %}
+            <span>{{ loan.status }}</span>
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <p>No loan applications yet.</p>
+  {% endif %}
+{% endblock %}
